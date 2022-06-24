@@ -1,0 +1,102 @@
+﻿@{
+    ViewData["Title"] = "Pagina de Vendas";
+}
+
+<h2>@ViewData["Title"]</h2>
+<h3><a asp-action="Create" class="btn btn-default">Cadastrar Venda</a></h3>
+<div class="row">
+    <div class="col-md-6">
+        <form class="form-horizontal" asp-action="SimpleSearch">
+            <fieldset>
+                <legend>Buscar Vendas Cadastradas</legend>
+                <div class="form-group">
+                    <label for="minDate" class="col-lg-2 control-label">Data Minima</label>
+                    <div class="col-lg-10">
+                        <input type="date" name="minData" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="maxDate" class="col-lg-2 control-label">Data Maxima</label>
+                    <div class="col-lg-10">
+                        <input type="date" name="Data Maxima" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-10 col-lg-offset-2">
+                        <button type="submit" class="btn btn-primary">Pesquisar</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+@{ /*
+  <div class="row">
+      <div class="col-md-6">
+          <form class="form-horizontal" asp-action="GroupingSearch">
+              <fieldset>
+                  <legend>Busca Agrupada</legend>
+                  <div class="form-group">
+                      <label for="minData" class="col-lg-2 control-label">Data Minima</label>
+                      <div class="col-lg-10">
+                          <input type="date" name="minData" class="form-control" />
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label for="maxDate" class="col-lg-2 control-label">Data Maxima</label>
+                      <div class="col-lg-10">
+                          <input type="date" name="maxData" class="form-control" />
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <div class="col-lg-10 col-lg-offset-2">
+                          <button type="submit" class="btn btn-primary">Pesquisar</button>
+                      </div>
+                  </div>
+              </fieldset>
+          </form>
+      </div>
+  </div>
+     */
+}
+
+
+@{/* @model IEnumerable<EscapCarAutomotivo.Models.Venda>
+
+      <h2>Pagina de Vendas</h2>
+      <p>
+          <a asp-action="Create" class="btn btn-default">Cadastrar Venda</a>
+      </p>
+      @{ /* <img src="~/images/CarrosPeças.jpg" alt="Carros" class="img-responsive" />
+      <table class="table table-striped table-hover">
+          <thead>
+              <tr>
+                  <th>
+                      @Html.DisplayNameFor(model => model.Nome)
+                  </th>
+                  <th>
+                      @Html.DisplayNameFor(model => model.Resultado)
+                  </th>
+              </tr>
+          </thead>
+          <tbody>
+              @foreach (var item in Model)
+              {
+                  <tr>
+                      <td>
+                          @Html.DisplayFor(modelItem => item.Nome)
+                      </td>
+                      <td>
+                          @Html.DisplayFor(modelItem => item.Resultado)
+                      </td>
+                      <td>
+                          <a asp-action="Edit" asp-route-id="@item.Id">Editar</a>
+                          <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a>
+                          <a asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
+                      </td>
+                  </tr>
+              }
+          </tbody>
+      </table> */
+}

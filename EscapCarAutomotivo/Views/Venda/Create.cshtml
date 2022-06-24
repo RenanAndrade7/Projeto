@@ -1,0 +1,95 @@
+﻿@model EscapCarAutomotivo.Models.ViewModels.VendaformViewModel
+
+@{
+    ViewData["Title"] = "Cadastro de Vendas";
+}
+
+<h2>@ViewData["Title"]</h2>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div class="form-group">
+                <dt>
+                    <label asp-for="Cliente" class="control-label"></label>
+                </dt>
+                <dd>
+                    <select asp-for="Cliente" asp-items="@(new SelectList(Model.Clientes, "Id", "Nome"))" class="form-control"></select>
+                </dd>
+                <dt>
+                    <label asp-for="DataVenda" class="control-label"></label>
+                </dt>
+                <dd>
+                    @Html.TextBoxFor(p => p.DataVenda, new { @type = "date" })
+                </dd>
+
+                <dt>
+                    <label asp-for="Status" class="control-label"></label>
+                </dt>
+                <dd>
+                    <select asp-for="Status" asp-items="@(new SelectList(Model.VendaStatus, "Indice", "Texto"))" class="form-control"></select>
+                </dd>
+
+                <dt>
+                    <label asp-for="Amortecedor" class="control-label"></label>
+                </dt>
+
+                <dd>
+                    @Html.TextBoxFor(p => p.Amortecedor)
+                </dd>
+
+                <dt>
+                    <label asp-for="Bandeja" class="control-label"></label>
+                </dt>
+
+                <dd>
+                    @Html.TextBoxFor(p => p.Bandeja)
+                </dd>
+
+                <dt>
+                    <label asp-for="KitAmortecedor" class="control-label"></label>
+                </dt>
+
+                <dd>
+                    @Html.TextBoxFor(p => p.KitAmortecedor)
+                </dd>
+
+                </dl>
+            </div>
+            <input type="submit" value="Cadastrar" class="btn btn-default" />
+        </form>
+    </div>
+</div>
+
+@{/* <dt>
+            <label asp-for="Produto" class="control-label"></label>
+        </dt>
+        <dd>
+            <select asp-for="Produto" asp-items="@(new SelectList(Model.Produtos,"Id","Nome"))" class="form-control"></select>
+        </dd>
+      }
+      <dt>
+          <label asp-for="Amortecedor" class="control-label"></label>
+      </dt>
+      <dd>
+          @Html.TextBoxFor(p => p.Amortecedor)
+      </dd>
+      <dt>
+          <label asp-for="Bandeja" class="control-label"></label>
+      </dt>
+      <dd>
+          @Html.TextBoxFor(p => p.Bandeja)
+      </dd>
+      <dt>
+          <label asp-for="KitAmortecedor" class="control-label"></label>
+      </dt>
+      <dd>
+          @Html.TextBoxFor(p => p.KitAmortecedor)
+      </dd>
+      </dl>
+    </div>
+    <input type="submit" value="Create" class="btn btn-default" />
+    </form>
+    </div>
+    </div> */
+}
